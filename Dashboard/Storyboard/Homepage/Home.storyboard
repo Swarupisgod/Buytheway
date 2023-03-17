@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wet-7F-DJd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account View Controller-->
+        <scene sceneID="KIq-RC-Wcd">
+            <objects>
+                <viewController id="yGv-6R-8bn" customClass="AccountViewController" customModule="BuyTheWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qrq-HS-Cm6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ywo-wS-6wW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Taz-1n-yNv">
+                        <barButtonItem key="rightBarButtonItem" image="rectangle.trailinghalf.inset.filled.arrow.trailing" catalog="system" id="5Vz-2i-FBn">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <segue destination="gNg-Ea-gRk" kind="show" id="oej-9C-Rjj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTa-bX-Nl2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355" y="-1711"/>
+        </scene>
+        <!--Logout View Controller-->
+        <scene sceneID="hjJ-Jn-DPT">
+            <objects>
+                <viewController id="gNg-Ea-gRk" customClass="LogoutViewController" customModule="BuyTheWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QKc-pH-f6P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-t7-XLW">
+                                <rect key="frame" x="40" y="632" width="313" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIE-9V-bx1">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="IFr-l0-viy"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="door.right.hand.open" catalog="system" title="Logout "/>
+                                        <connections>
+                                            <action selector="logoutButton:" destination="gNg-Ea-gRk" eventType="touchUpInside" id="YPR-WV-TdE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qv-L9-Nml">
+                                        <rect key="frame" x="0.0" y="70" width="313" height="50"/>
+                                        <color key="backgroundColor" red="0.55633264780000002" green="0.1601187885" blue="0.14757645129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dUj-RQ-3ON"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="trash.fill" catalog="system" title="Delete Account"/>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="gNg-Ea-gRk" eventType="touchUpInside" id="UsQ-gh-dEM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fPT-ZB-Mm7">
+                                <rect key="frame" x="40" y="143" width="313" height="218"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9ae-e7-rtu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fPT-ZB-Mm7" secondAttribute="bottom" constant="491" id="7VR-ap-rYZ"/>
+                            <constraint firstItem="fPT-ZB-Mm7" firstAttribute="leading" secondItem="9ae-e7-rtu" secondAttribute="leading" constant="40" id="FNS-UE-meW"/>
+                            <constraint firstItem="9ae-e7-rtu" firstAttribute="trailing" secondItem="3Xc-t7-XLW" secondAttribute="trailing" constant="40" id="HfS-qf-NKR"/>
+                            <constraint firstItem="9ae-e7-rtu" firstAttribute="trailing" secondItem="fPT-ZB-Mm7" secondAttribute="trailing" constant="40" id="Yay-TT-V94"/>
+                            <constraint firstItem="fPT-ZB-Mm7" firstAttribute="top" secondItem="9ae-e7-rtu" secondAttribute="top" constant="40" id="ZYK-9Z-vRo"/>
+                            <constraint firstAttribute="bottom" secondItem="3Xc-t7-XLW" secondAttribute="bottom" constant="100" id="wqP-t6-ChD"/>
+                            <constraint firstItem="3Xc-t7-XLW" firstAttribute="leading" secondItem="9ae-e7-rtu" secondAttribute="leading" constant="40" id="zai-6n-bqc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="whc-lr-AUp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="js1-Q1-oqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2253" y="-1711"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="l1u-CF-kBz">
+            <objects>
+                <viewController id="CNr-ID-78p" customClass="MessageViewController" customModule="BuyTheWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUI-G4-MaA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xeP-ct-0R6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Message" image="message.circle" catalog="system" id="aYh-60-HLP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LF-5H-CDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="-880"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="y7r-hG-tPb">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="leD-GA-vrM" customClass="HomeViewController" customModule="BuyTheWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVM-DQ-41g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lAV-G4-IQg"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="WlF-f4-kwJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="op9-jK-RlC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1326" y="-880"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="LsX-TV-BBs">
+            <objects>
+                <viewController id="MBT-fc-MDD" customClass="CartViewController" customModule="BuyTheWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z2r-zR-iAv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1xJ-I6-Eu3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart.fill" catalog="system" id="GPa-6w-qML"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6g-qJ-EhB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-422" y="-879"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="7YT-c0-dTg">
+            <objects>
+                <tabBarController storyboardIdentifier="TabVC" id="wet-7F-DJd" customClass="TabViewController" customModule="BuyTheWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fbA-ND-G5G">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="leD-GA-vrM" kind="relationship" relationship="viewControllers" id="3Rh-PU-lQW"/>
+                        <segue destination="MBT-fc-MDD" kind="relationship" relationship="viewControllers" id="478-sD-vxQ"/>
+                        <segue destination="NiF-zH-z01" kind="relationship" relationship="viewControllers" id="cqc-jB-38n"/>
+                        <segue destination="CNr-ID-78p" kind="relationship" relationship="viewControllers" id="hv4-Ho-u17"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75P-rT-sUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-422" y="-1711"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="TUW-4J-MmD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NiF-zH-z01" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person.circle" catalog="system" id="jHZ-jE-LuH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M9Q-BO-BkA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yGv-6R-8bn" kind="relationship" relationship="rootViewController" id="aDx-bD-quY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbk-A3-Y0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="-1711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="door.right.hand.open" catalog="system" width="108" height="128"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="message.circle" catalog="system" width="128" height="123"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="rectangle.trailinghalf.inset.filled.arrow.trailing" catalog="system" width="128" height="93"/>
+        <image name="trash.fill" catalog="system" width="119" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
